@@ -19,41 +19,43 @@
                 <li><a href="projects.html">Projets</a></li>
                 <li><a href="skills.html">Compétences</a></li>
                 <li><a href="parcours.html">Parcours</a></li>
-                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <div class="container">
-            <section class="hero fade-in">
-                <h1>Noam Joly-Girods</h1>
-                
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">3</span>
-                        <span class="stat-label">Années d'études</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">10+</span>
-                        <span class="stat-label">Projets réalisés</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">10+</span>
-                        <span class="stat-label">Compétences développées</span>
-                    </div>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Noam Joly-Girods</h1>
+                <p class="hero-subtitle">Développeur Full Stack</p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn secondary">À propos de moi</a>
                 </div>
-
-            </section>
-
-            <section class="about-section">
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Années d'études</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Projets réalisés</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Compétences dévelopées</span>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <section id="about" class="about-section">
                 <h2 class="section-title">À propos de moi</h2>
                 <div class="about-content fade-in">
                     <p><b>Étudiant en troisième année de BUT informatique</b>, je m’investis dans le développement <b>d’applications web</b> et <b>mobiles</b> avec l’envie de créer des solutions concrètes et utiles.</p>
                     <p>Mon parcours m’a conduit à explorer différents aspects du <b>développement</b>, de la <b>programmation</b> à la <b>gestion de bases de données</b>, en passant par le <b>travail en équipe</b> sur des projets collaboratifs. Ces expériences m’ont permis de développer un <b>sens de l’organisation</b>, de la <b>rigueur</b> et une <b>capacité à m’adapter</b> aux défis rencontrés.
                         J’aime particulièrement apprendre de nouvelles technologies et les mettre en œuvre pour résoudre des problèmes réels. Que ce soit en autonomie ou au sein d’une équipe, je cherche toujours à évoluer tout en apportant une contribution utile. Mon objectif est de continuer à progresser dans un domaine où chaque projet peut avoir un véritable impact.</p>
                 </div>
-                <a href="contact.html" class="btn secondary">Me contacter</a>
+                <a href="#contact" class="btn secondary">Me contacter</a>
             </section>
 
             <section class="featured-projects">
@@ -99,6 +101,31 @@
         </div>
     </main>
 
+    <footer>
+        <div class="footer-content" id="contact">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> noamjoly2812@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +33 6 13 59 39 45</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Bethoncourt, France</p>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Réseaux Sociaux</h3>
+                <div class="social-links">
+                    <a href="https://github.com/Na-m0" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://www.linkedin.com/in/noam-joly-girods-3a27b62a4" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Noam Joly-Girods. Tous droits réservés.</p>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
 </body>
 </html>
