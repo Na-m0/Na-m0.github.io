@@ -466,7 +466,6 @@ nav ul li a.active::after {
 }
 
 .about-content p {
-    margin-bottom: 1.5rem;
     line-height: 1.8;
 }
 
