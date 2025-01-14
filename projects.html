@@ -3,33 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Mes Projets</title>
 </head>
 <body>
     <header>
-        <h1>Mes Projets</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="projects.html">Mes Projets</a></li>
-                <li><a href="about.html">Qui Je Suis</a></li>
+                <li><a href="projects.html" class="active">Projets</a></li>
+                <li><a href="skills.html">Compétences</a></li>
+                <li><a href="experience.html">Expérience</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <section>
-            <h2>Projets récents</h2>
-            <ul>
-                <li>Projet 1</li>
-                <li>Projet 2</li>
-                <li>Projet 3</li>
-            </ul>
-        </section>
+        <div class="container">
+            <h1 class="section-title">Mes Projets</h1>
+
+            <div class="projects-filters">
+                <button class="btn secondary active" data-filter="all">Tous</button>
+                <button class="btn secondary" data-filter="web">Web</button>
+                <button class="btn secondary" data-filter="mobile">Applications Web/Mobliles</button>
+                <button class="btn secondary" data-filter="design">Design</button>
+            </div>
+
+            <div class="projects-grid">
+                <article class="project-card fade-in" data-category="web">
+                    <div class="project-image">
+                        <img src="assets/images/project1.png" alt="E-commerce Platform">
+                    </div>
+                    <div class="project-content">
+                        <h3>Balonu</h3>
+                        <p>Site web permettant de
+                            vendre des vols de montgolfières lors d’une manifestation et utilisant plusieurs connexions
+                            comme prestataire et admin</p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>Node.js</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://balonu.vercel.app" class="btn secondary">Voir le projet</a>
+                            <a href="#" class="btn secondary">Code source</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card fade-in" data-category="mobile">
+                    <div class="project-image">
+                        <img src="assets/images/project2.png" alt="Fitness App">
+                    </div>
+                    <div class="project-content">
+                        <h3>Gestion de demandes informatiques</h3>
+                        <p>Application web de gestion de demandes informatiques en vue de la
+                            préparation budgétaire de la ville de Montbéliard. Effectué lors de mon stage de deuxième
+                            année.</p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>Node.js</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://noamjg-portfolio.vercel.app" class="btn secondary">Voir le projet</a>
+                            <a href="#" class="btn secondary">Code source</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card fade-in" data-category="design">
+                    <div class="project-image">
+                        <img src="assets/images/project3.jpg" alt="Portfolio Design">
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio Photographe</h3>
+                        <p>Site vitrine moderne pour photographe professionnel avec galerie interactive et système de réservation.</p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>Nuxt.js</span>
+                            <span>Sanity CMS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn secondary">Voir le projet</a>
+                            <a href="#" class="btn secondary">Code source</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card fade-in" data-category="web">
+                    <div class="project-image">
+                        <img src="assets/images/project4.jpg" alt="Dashboard Analytics">
+                    </div>
+                    <div class="project-content">
+                        <h3>Dashboard Analytics</h3>
+                        <p>Interface d'administration pour la visualisation et l'analyse de données en temps réel.</p>
+                        <div class="project-tech">
+                            <span>Angular</span>
+                            <span>D3.js</span>
+                            <span>Node.js</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn secondary">Voir le projet</a>
+                            <a href="#" class="btn secondary">Code source</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
     </main>
-    <footer>
-        <p>&copy; 2025 Mon Nom</p>
-    </footer>
+
     <script src="script.js"></script>
+    <script>
+        // Filtrage des projets
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.projects-filters button');
+            const projects = document.querySelectorAll('.project-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const filter = button.getAttribute('data-filter');
+                    
+                    // Mise à jour des boutons actifs
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    // Filtrage des projets
+                    projects.forEach(project => {
+                        if (filter === 'all' || project.getAttribute('data-category') === filter) {
+                            project.style.display = 'block';
+                        } else {
+                            project.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>

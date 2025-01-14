@@ -3,29 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Accueil</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Mon Portfolio</title>
 </head>
 <body>
     <header>
-        <h1>Bienvenue sur mon portfolio</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="projects.html">Mes Projets</a></li>
-                <li><a href="about.html">Qui Je Suis</a></li>
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="projects.html">Projets</a></li>
+                <li><a href="skills.html">Compétences</a></li>
+                <li><a href="experience.html">Expérience</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
+
+
+
     <main>
-        <section>
-            <h2>À propos de moi</h2>
-            <p>Je suis un développeur passionné par la création de sites web.</p>
-        </section>
+        <div class="container">
+            <section class="hero fade-in">
+                <h1>Noam Joly-Girods</h1>
+                <p>Passionné par la création d'applications web modernes et innovantes</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Années d'études</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">Projets réalisés</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Technologies apprises</span>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="about-section">
+                <h2 class="section-title">À propos de moi</h2>
+                <div class="about-content fade-in">
+                    <p>Je suis un développeur Full Stack passionné par la création d'applications web modernes et performantes. Mon expertise couvre aussi bien le développement frontend que backend, avec une attention particulière pour l'expérience utilisateur et les bonnes pratiques de développement.</p>
+                    <p>En constante veille technologique, j'aime relever de nouveaux défis et partager mes connaissances avec la communauté à travers mon blog et mes contributions open source.</p>
+                </div>
+                <a href="contact.html" class="btn secondary">Me contacter</a>
+            </section>
+
+            <section class="featured-projects">
+                <h2 class="section-title">Projets en vedette</h2>
+                <div class="projects-grid">
+                    <article class="project-card fade-in">
+                        <div class="project-image">
+                            <img src="assets/images/project1.png" alt="Projet 1">
+                        </div>
+                        <div class="project-content">
+                            <h3>Balonu</h3>
+                            <p>Site web permettant de
+                                vendre des vols de montgolfières lors d’une manifestation et utilisant plusieurs connexions
+                                comme prestataire et admin</p>
+                            <div class="project-tech">
+                                <span>Vue.js</span>
+                                <span>Node.js</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card fade-in">
+                        <div class="project-image">
+                            <img src="assets/images/project2.png" alt="Projet 2">
+                        </div>
+                        <div class="project-content">
+                            <h3>Gestion de demandes informatiques</h3>
+                            <p>Application web de gestion de demandes informatiques en vue de la
+                                préparation budgétaire de la ville de Montbéliard. Effectué lors de mon stage de deuxième
+                                année.
+                                </p>
+                            <div class="project-tech">
+                                <span>Vue.js</span>
+                                <span>Python</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <a href="projects.html" class="btn primary">Voir mes projets</a>
+        </div>
     </main>
-    <footer>
-        <p>&copy; 2025 Mon Nom</p>
-    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
